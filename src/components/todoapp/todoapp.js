@@ -13,9 +13,11 @@ const TodoApp = () => {
 
     let createTime = formatDistanceToNow(
         new Date(),
-        {includeSeconds: true,
-            addSuffix: true}
-    )
+        {
+            includeSeconds: true,
+            addSuffix: true
+        }
+    );
 
     const todoData = [ // якобы получаем данные с сервера
         {description: 'Completed task', completed: true, edited: false, createTime, id: 1},
