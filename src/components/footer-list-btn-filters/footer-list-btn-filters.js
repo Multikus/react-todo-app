@@ -1,20 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import './footer-list-btn-filters.css';
 
-const FooterListBtnFilter = () => {
-    return (
-        <ul className="filters">
-            <li>
-                <button className="selected">All</button>
-            </li>
-            <li>
-                <button>Active</button>
-            </li>
-            <li>
-                <button>Completed</button>
-            </li>
-        </ul>
-    );
-};
+export default class FooterListBtnFilter extends Component {
 
-export default FooterListBtnFilter;
+    
+    render() {
+        const { onFilterCompleted, onFilterAll, toDoStatusFilter } = this.props;
+        console.log(this.props);
+        return (
+            <ul className='filters'>
+                <li>
+                    <button className="selected" onClick={ () => toDoStatusFilter('all') }>All</button>
+                </li>
+                <li>
+                    <button onClick={ () => toDoStatusFilter('active') }>Active</button>
+                </li>
+                <li>
+                    <button onClick={ () => toDoStatusFilter('completed') }>Completed</button>
+                </li>
+            </ul>
+        );
+    }
+
+};

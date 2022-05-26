@@ -1,9 +1,9 @@
 import React from "react";
 import './footer-count-todo.css';
 
-const FooterCountTodo = () => {
+const FooterCountTodo = ({toDo}) => {
     return (
-        <span className="todo-count">1 items left</span>
+        <span className="todo-count">{toDo} items left</span>
     );
 };
 

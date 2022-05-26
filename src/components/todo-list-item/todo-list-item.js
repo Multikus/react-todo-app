@@ -5,22 +5,10 @@ import './todo-list-item.css';
 
 export default class TodoListItem extends Component {
 
-    state = {
-        completed: false
-    }
-
-    onMarkComplete = () => { //устанавливаем важность задачи в списке
-        this.setState( (state) => { //setState принимает функцию с параметром содержащим текущий STATE c состоянием компоненты
-            return { //возвращаем новый STATE в зависимости от текущего состояния
-                completed: !state.completed
-            };
-        });
-    };
 
     render() {
 
-        const { onDeleted, description, createTime } = this.props;
-        const { completed } = this.state;
+        const { onDeleted, description, createTime, onToggleCompleted, completed } = this.props;
 
         let classNameComplete = 'view ';
 
@@ -34,7 +22,7 @@ export default class TodoListItem extends Component {
                             <input 
                                 className="toggle" 
                                 type="checkbox"
-                                onClick={ this.onMarkComplete } ></input>
+                                onClick={ onToggleCompleted } ></input>
 
                             <label>
                                 <span className="description">{ description }</span>
