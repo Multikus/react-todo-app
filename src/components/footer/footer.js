@@ -6,13 +6,11 @@ import './footer.css';
 
 
 
-const Footer = ({ toDo, onClearCompleteItem, onFilterCompleted, onFilterAll, toDoStatusFilter }) => {
+const Footer = ({ toDo, onClearCompleteItem, toDoStatusFilter }) => {
     return (
         <footer className="footer">
             <FooterCountTodo  toDo={toDo}/>
             <FooterListBtnFilter 
-                // onFilterCompleted={ () => onFilterCompleted() }
-                // onFilterAll={ () => onFilterAll() }
                 toDoStatusFilter={ toDoStatusFilter }/>
             <FooterClearBtn onClearCompleteItem={ () => onClearCompleteItem() }/>
         </footer>

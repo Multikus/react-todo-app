@@ -5,7 +5,7 @@ export default class FooterListBtnFilter extends Component {
 
     
     render() {
-        const { onFilterCompleted, onFilterAll, toDoStatusFilter } = this.props;
+        const { toDoStatusFilter } = this.props;
         console.log(this.props);
         return (
             <ul className='filters'>

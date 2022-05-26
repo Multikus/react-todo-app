@@ -163,8 +163,6 @@ export default class TodoApp extends React.Component {
                                 onToggleCompleted={this.onToggleCompleted}/>
                     <Footer toDo={ todoCount }
                             onClearCompleteItem={ this.onClearCompleteItem }
-                            // onFilterCompleted={ this.onFilterCompleted }
-                            // onFilterAll={ this.onFilterAll }
                             toDoStatusFilter={ this.toDoStatusFilter }/>
                 </section>
 
